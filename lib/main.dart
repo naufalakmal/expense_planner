@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget {
           title: Text('My First App'),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
               width: double.infinity,
@@ -25,6 +27,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Card(
+              color: Colors.red,
               child: Text('LIST OF TXT'),
             ),
           ],
