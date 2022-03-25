@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.deepOrange,
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          // mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
@@ -43,6 +43,27 @@ class MyApp extends StatelessWidget {
                 color: Colors.deepOrange,
                 child: Text('CHART!'),
                 elevation: 4,
+              ),
+            ),
+            Card(
+              child: Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Title'),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Amount'),
+                    ),
+                    FlatButton(
+                      child: Text('Add Transaction'),
+                      textColor: Colors.deepOrange,
+                      onPressed: () {},
+                    )
+                  ],
+                ),
               ),
             ),
             Column(
