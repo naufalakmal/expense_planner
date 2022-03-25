@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
 import './transaction.dart';
 
 // void main() {
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.deepOrange,
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
@@ -78,7 +80,7 @@ class MyApp extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            tx.date.toString(),
+                            DateFormat.yMMMd().format(tx.date),
                             style: TextStyle(color: Colors.grey),
                           ),
                         ],
