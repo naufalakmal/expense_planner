@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './transaction.dart';
 
 // void main() {
 //   runApp(MyApp());
@@ -7,12 +8,27 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  final List<Transaction> transaction = [
+    Transaction(
+      id: 't1',
+      title: 'New Shirts',
+      amount: 10000,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't2',
+      title: 'New Phone',
+      amount: 3000000,
+      date: DateTime.now(),
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First App'),
+          title: Text('Expense Planner'),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
