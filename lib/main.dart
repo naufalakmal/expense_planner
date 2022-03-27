@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import './widgets/user_transaction.dart';
 
@@ -14,6 +16,9 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Expense Planner'),
           backgroundColor: Colors.deepOrange,
+          actions: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+          ],
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -31,6 +36,11 @@ class MyApp extends StatelessWidget {
               UserTransactions(),
             ],
           ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {},
         ),
       ),
     );
