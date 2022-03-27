@@ -15,20 +15,22 @@ class MyApp extends StatelessWidget {
           title: Text('Expense Planner'),
           backgroundColor: Colors.deepOrange,
         ),
-        body: Column(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Container(
-              width: double.infinity,
-              child: Card(
-                color: Colors.deepOrange,
-                child: Text('CHART!'),
-                elevation: 4,
+        body: SingleChildScrollView(
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Container(
+                width: double.infinity,
+                child: Card(
+                  color: Colors.deepOrange,
+                  child: Text('CHART!'),
+                  elevation: 4,
+                ),
               ),
-            ),
-            UserTransactions(),
-          ],
+              UserTransactions(),
+            ],
+          ),
         ),
       ),
     );
