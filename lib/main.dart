@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.deepOrange,
           fontFamily: 'Nunito',
           textTheme: ThemeData.light().textTheme.copyWith(
-                titleMedium: TextStyle(
+                headline6: TextStyle(
                   fontFamily: 'Nunito',
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
@@ -46,18 +46,18 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   // String titleInput;
   final List<Transaction> _userTransaction = [
-    Transaction(
-      id: 't1',
-      title: 'New Shirts',
-      amount: 10.65,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'New Phone',
-      amount: 100.5,
-      date: DateTime.now(),
-    ),
+    // Transaction(
+    //   id: 't1',
+    //   title: 'New Shirts',
+    //   amount: 10.65,
+    //   date: DateTime.now(),
+    // ),
+    // Transaction(
+    //   id: 't2',
+    //   title: 'New Phone',
+    //   amount: 100.5,
+    //   date: DateTime.now(),
+    // ),
   ];
 
   void _addNewTransaction(String txTitle, double txAmount) {
