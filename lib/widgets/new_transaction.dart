@@ -19,7 +19,7 @@ class _NewTransactionState extends State<NewTransaction> {
     final enteredAmount = double.parse(amountController.text);
 
     if (enteredTitle.isEmpty || enteredAmount <= 0) {
-      return;
+      return; 
     }
 
     widget.addTx(

@@ -9,7 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter App',
+      title: 'Expense Planner',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        accentColor: Colors.deepOrange,
+      ),
       home: MyHomePage(),
     );
   }
@@ -69,7 +73,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Expense Planner'),
-        backgroundColor: Colors.deepOrange,
         actions: [
           IconButton(
             icon: Icon(Icons.add),
@@ -85,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               width: double.infinity,
               child: Card(
-                color: Colors.deepOrange,
+                color: Theme.of(context).primaryColorLight,
                 child: Text('CHART!'),
                 elevation: 4,
               ),
@@ -97,7 +100,6 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        backgroundColor: Colors.deepOrange,
         onPressed: () => _startAddNewTransaction(context),
       ),
     );
