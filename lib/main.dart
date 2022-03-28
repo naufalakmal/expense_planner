@@ -11,9 +11,26 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Expense Planner',
       theme: ThemeData(
-        primarySwatch: Colors.teal,
-        accentColor: Colors.deepOrange,
-      ),
+          primarySwatch: Colors.teal,
+          accentColor: Colors.deepOrange,
+          fontFamily: 'Nunito',
+          textTheme: ThemeData.light().textTheme.copyWith(
+                titleMedium: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
+              ),
+          appBarTheme: AppBarTheme(
+            titleTextStyle: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+            // textTheme: ThemeData.light().textTheme.copyWith(
+            //       headline6: TextStyle(fontFamily: 'Poppins'),
+            //     ),
+          )),
       home: MyHomePage(),
     );
   }
@@ -72,7 +89,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expense Planner'),
+        title: Text(
+          'Expense Planner',
+        ),
         actions: [
           IconButton(
             icon: Icon(Icons.add),
